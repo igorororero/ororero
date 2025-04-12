@@ -1,14 +1,11 @@
-
-# uproszczona wersja — w Twoim pliku będzie pełny kod z canvas
-import json
-import requests
-from flask import Flask, request
+from flask import Flask
 
 app = Flask(__name__)
 
-@app.route("/callback")
-def callback():
-    return "Działa!"
+@app.route("/")
+def home():
+    return "Działa! ✅ Bot uruchomiony na Render."
 
 if __name__ == "__main__":
-    app.run()
+    # Dla Render: nasłuchuj na 0.0.0.0 (nie localhost!) i na porcie 5000
+    app.run(host="0.0.0.0", port=5000)
