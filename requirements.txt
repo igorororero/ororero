@@ -1,4 +1,4 @@
 flask
 requests
 schedule
-web: gunicorn allegro-bot:app
+gunicorn
